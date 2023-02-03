@@ -1,5 +1,3 @@
-// You can edit this code!
-// Click here and start typing.
 package main
 
 import "fmt"
@@ -7,34 +5,6 @@ import "fmt"
 type ListNode struct {
 	Val  int
 	Next *ListNode
-}
-
-func main() {
-	var list1, list2 *ListNode
-	list1 = addNode(list1, 1)
-	list1 = addNode(list1, 2)
-	list1 = addNode(list1, 4)
-	list1 = addNode(list1, 6)
-	list1 = addNode(list1, 9)
-
-	list2 = addNode(list2, 3)
-	list2 = addNode(list2, 5)
-	list2 = addNode(list2, 7)
-	list2 = addNode(list2, 8)
-	list2 = addNode(list2, 90)
-	list2 = addNode(list2, 230)
-
-	fmt.Print("After merging 1,2,4,6,9 and 3,5,7,8,90,230 ===>>> ")
-	tmp := mergeTwoLists(list1, list2)
-	for tmp != nil {
-		if tmp.Next == nil {
-			fmt.Print(tmp.Val)
-		} else {
-			fmt.Print(tmp.Val, ",")
-		}
-
-		tmp = tmp.Next
-	}
 }
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
@@ -89,4 +59,32 @@ func addNode(ln *ListNode, val int) *ListNode {
 		Next: nil,
 	}
 	return ln
+}
+
+func main() {
+	var list1, list2 *ListNode
+	list1 = addNode(list1, 1)
+	list1 = addNode(list1, 2)
+	list1 = addNode(list1, 4)
+	list1 = addNode(list1, 6)
+	list1 = addNode(list1, 9)
+
+	list2 = addNode(list2, 3)
+	list2 = addNode(list2, 5)
+	list2 = addNode(list2, 7)
+	list2 = addNode(list2, 8)
+	list2 = addNode(list2, 90)
+	list2 = addNode(list2, 230)
+
+	fmt.Print("After merging 1,2,4,6,9 and 3,5,7,8,90,230 ===>>> ")
+	tmp := mergeTwoLists(list1, list2)
+	for tmp != nil {
+		if tmp.Next == nil {
+			fmt.Print(tmp.Val)
+		} else {
+			fmt.Print(tmp.Val, ",")
+		}
+
+		tmp = tmp.Next
+	}
 }

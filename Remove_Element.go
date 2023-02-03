@@ -1,8 +1,4 @@
-// You can edit this code!
-// Click here and start typing.
 package main
-
-
 
 import "fmt"
 
@@ -34,5 +30,5 @@ func removeElementOpt(nums []int, val int) int {
 
 func main() {
 	fmt.Println("Len after removal is:::", removeElement([]int{1, 2, 4, 5, 6, 7}, 4))
-	fmt.Println("Len after removal is:::", removeElementOpt([]int{1, 2, 4, 5, 6, 7}, 4))
+	fmt.Println("Len after removal with Optimized logic is:::", removeElementOpt([]int{1, 2, 4, 5, 6, 7}, 4))
 }

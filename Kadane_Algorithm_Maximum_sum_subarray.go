@@ -2,12 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	fmt.Println("Kadane's Algorithm::: Maximum sum subarray problem")
-	var arr []int = []int{-3, 4, 5, -2, -1, 8, -4}
-	fmt.Println("Maximum sum:::", kadane(arr))
-}
-
 func kadane(arr []int) int {
 	n, sum, max := len(arr), 0, 0
 	for i := 0; i < n; i++ {
@@ -21,4 +15,10 @@ func kadane(arr []int) int {
 		}
 	}
 	return max
+}
+
+func main() {
+	fmt.Println("Kadane's Algorithm::: Maximum sum subarray problem")
+	var arr []int = []int{-3, 4, 5, -2, -1, 8, -4}
+	fmt.Println("Maximum sum:::", kadane(arr))
 }

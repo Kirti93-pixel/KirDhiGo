@@ -1,15 +1,6 @@
-// You can edit this code!
-// Click here and start typing.
 package main
 
 import "fmt"
-
-func main() {
-	fmt.Println("Hello, 世界")
-	fmt.Println("Is parenthesis valid  {}[]() ::::", isValid("{}[]()"))
-	fmt.Println("Is parenthesis valid  {}[](  ::::", isValid("{}[]("))
-	fmt.Println("Is parenthesis valid  {}() ::::", isValid("{}()"))
-}
 
 func isValid(s string) bool {
 	sLen := len(s)
@@ -52,4 +43,10 @@ func (s *Stack) Pop() (string, bool) {
 	resStr := (*s)[index]
 	*s = (*s)[:index]
 	return resStr, true
+}
+
+func main() {
+	fmt.Println("Is parenthesis valid {}[]() ::::", isValid("{}[]()"))
+	fmt.Println("Is parenthesis valid {}[](  ::::", isValid("{}[]("))
+	fmt.Println("Is parenthesis valid {}() ::::", isValid("{}()"))
 }

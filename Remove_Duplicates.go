@@ -1,13 +1,6 @@
-// You can edit this code!
-// Click here and start typing.
 package main
 
 import "fmt"
-
-func main() {
-	fmt.Println("Hello, 世界")
-	fmt.Println("After removing duplicates::::", removeDuplicates([]int{1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8}))
-}
 
 func removeDuplicates(nums []int) int {
 	numsLen := len(nums)
@@ -25,5 +18,8 @@ func removeDuplicates(nums []int) int {
 		}
 	}
 	return insertIdx
+}
 
+func main() {
+	fmt.Println("After removing duplicates, the length is::::", removeDuplicates([]int{1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8}))
 }

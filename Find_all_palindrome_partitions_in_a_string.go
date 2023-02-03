@@ -1,16 +1,6 @@
-// You can edit this code!
-// Click here and start typing.
 package main
 
 import "fmt"
-
-func main() {
-	s := "aabba"
-	path := make([]string, 0)
-	result := make([][]string, 0)
-	findAllPalPartitions(0, s, path, &result)
-	fmt.Println("res::", result)
-}
 
 func findAllPalPartitions(index int, s string, path []string, res *[][]string) {
 	if index == len(s) {
@@ -41,4 +31,12 @@ func IsPalindrome(str string, start, end int) bool {
 		end -= 1
 	}
 	return true
+}
+
+func main() {
+	s := "aabba"
+	path := make([]string, 0)
+	result := make([][]string, 0)
+	findAllPalPartitions(0, s, path, &result)
+	fmt.Println("res::", result)
 }

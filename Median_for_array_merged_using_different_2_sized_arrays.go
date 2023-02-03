@@ -1,22 +1,9 @@
-// You can edit this code!
-// Click here and start typing.
 package main
 
 import (
 	"fmt"
 	"math"
 )
-
-func main() {
-	fmt.Println("Hello, 世界")
-	//a := []int32{1, 3, 8, 9, 15}
-	//b := []int32{7, 11, 19, 21, 22, 25}  both testcases ans 11
-	//a := []int32{2, 3, 5, 8}
-	//b := []int32{10, 12, 14, 16, 18, 20}
-	a := []int{1, 2}
-	b := []int{3, 4}
-	fmt.Println(findMedianSortedArrays(a, b))
-}
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	if len(nums1) > len(nums2) {
@@ -83,4 +70,14 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		}
 	}
 	return -1
+}
+
+func main() {
+	//a := []int32{1, 3, 8, 9, 15}
+	//b := []int32{7, 11, 19, 21, 22, 25}  both testcases ans 11
+	//a := []int32{2, 3, 5, 8}
+	//b := []int32{10, 12, 14, 16, 18, 20}
+	a := []int{1, 2}
+	b := []int{3, 4}
+	fmt.Println("Median for 1,2 and 3,4 is",findMedianSortedArrays(a, b))
 }

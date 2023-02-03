@@ -2,13 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	fmt.Println("KMP String matching algorithm")
-	text := "abshdbfudmabcabydgfjrndkf"
-	pat := "abcaby"
-	fmt.Println(KMP(text, pat))
-}
-
 func KMP(text, pat string) bool {
 	lps := computeTemporaryArray(pat)
 	var i, j int = 0, 0
@@ -50,4 +43,11 @@ func computeTemporaryArray(pat string) []int {
 		}
 	}
 	return lps
+}
+
+func main() {
+	fmt.Println("KMP String matching algorithm")
+	text := "abshdbfudmabcabydgfjrndkf"
+	pat := "abcaby"
+	fmt.Println(KMP(text, pat))
 }
