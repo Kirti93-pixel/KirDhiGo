@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func squareRootLinearSearch(x int) int {
+func squareRoot(x int) int {
 	if x == 0 || x == 1 {
 		return x
 	}
@@ -40,6 +40,6 @@ func squareRootBinarySearch(x int) int {
 }
 
 func main() {
-	fmt.Println("squareRootLinearSearch for 16 is:::", squareRootLinearSearch(16))
+	fmt.Println("squareRoot for 16 is:::", squareRoot(16))
 	fmt.Println("squareRootBinarySearch for 80 is:::", squareRootBinarySearch(80))
 }
