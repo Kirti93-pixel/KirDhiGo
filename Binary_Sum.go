@@ -13,7 +13,8 @@ func addBinary(a string, b string) string {
 	for i >= 0 && j >= 0 {
 		first := int(a[i] - '0')
 		sec := int(b[j] - '0')
-		sum, carry = binarySum(first, sec, carry)
+		// sum, carry = binarySum(first, sec, carry)
+		sum, carry = binarySumUsingMaths(first, sec, carry)
 		output = strconv.Itoa(sum) + output
 		i--
 		j--
@@ -21,14 +22,16 @@ func addBinary(a string, b string) string {
 
 	for i >= 0 {
 		first := int(a[i] - '0')
-		sum, carry = binarySum(first, 0, carry)
+		// sum, carry = binarySum(first, 0, carry)
+		sum, carry = binarySumUsingMaths(first, 0, carry)
 		output = strconv.Itoa(sum) + output
 		i--
 	}
 
 	for j >= 0 {
 		sec := int(b[j] - '0')
-		sum, carry = binarySum(0, sec, carry)
+		// sum, carry = binarySum(0, sec, carry)
+		sum, carry = binarySumUsingMaths(0, sec, carry)
 		output = strconv.Itoa(sum) + output
 		j--
 	}
@@ -40,7 +43,7 @@ func addBinary(a string, b string) string {
 	return output
 }
 
-func binarySum(a, b, carry int) (int, int) {
+func binarySum(a, b, carry int) (int, int) { //sum,carry
 	output := a + b + carry
 
 	switch output {
@@ -54,6 +57,10 @@ func binarySum(a, b, carry int) (int, int) {
 		return 1, 1
 	}
 	return 0, 0
+}
+
+func binarySumUsingMaths(a,b,carry int) (int,int) { //sum(using modulus),carry(using division)
+    return (a + b + carry)%2, (a + b + carry)/2
 }
 
 func main() {
