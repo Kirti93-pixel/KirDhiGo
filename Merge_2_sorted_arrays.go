@@ -61,6 +61,17 @@ func addNode(ln *ListNode, val int) *ListNode {
 	return ln
 }
 
+func printElements(list *ListNode) {
+	for list != nil {
+		if list.Next == nil {
+			fmt.Print(list.Val)
+		} else {
+			fmt.Print(list.Val, ",")
+		}
+		list = list.Next
+	}
+}
+
 func main() {
 	var list1, list2 *ListNode
 	list1 = addNode(list1, 1)
@@ -77,15 +88,4 @@ func main() {
 	list2 = addNode(list2, 230)
 	fmt.Print("After merging 1,2,4,6,9 and 3,5,7,8,90,230 ===>>> ")
 	printElements(mergeTwoLists(list1, list2))
-}
-
-func printElements(list *ListNode) {
-	for list != nil {
-		if list.Next == nil {
-			fmt.Print(list.Val)
-		} else {
-			fmt.Print(list.Val, ",")
-		}
-		list = list.Next
-	}
 }
