@@ -69,6 +69,21 @@ func printInOrder(n *Node) {
 
 }
 
+func inorderTraversal(root *Node) []string {
+    res := make([]string, 0)
+    treeTransverse(root, &res)
+    return res
+}
+
+func treeTransverse(node *Node, res *[]string) {
+    if node == nil {
+        return
+    }
+    treeTransverse(node.left, res)
+    *res = append(*res, string(node.key))
+    treeTransverse(node.right, res)
+}
+
 func main() {
 	t := &Tree{}
 	t.insert('F')
@@ -86,5 +101,5 @@ func main() {
 	printPostOrder(t.root)
 	fmt.Println("InOrder:::")
 	printInOrder(t.root)
-
+	fmt.Println("Stored inordered transversal in an array:::", inorderTraversal(t.root))
 }
