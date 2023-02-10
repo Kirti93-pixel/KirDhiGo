@@ -23,5 +23,5 @@ func merge(nums1 []int, m int, nums2 []int, n int) []int {
 }
 
 func main() {
-	fmt.Println("After merging 2 arrays(1st array==> [1,3,5,0,0,0] and 2nd array==> [2,4,8]) in first array::::", merge([]int{1, 3, 5, 0, 0, 0}, 3, []int{2, 4, 8}, 3))
+	fmt.Println("After merging 2 sorted arrays(1st array==> [1,3,5,0,0,0] and 2nd array==> [2,4,8]) in first array::::", merge([]int{1, 3, 5, 0, 0, 0}, 3, []int{2, 4, 8}, 3))
 }
