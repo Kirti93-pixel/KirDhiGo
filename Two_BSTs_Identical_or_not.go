@@ -17,22 +17,22 @@ func (t *Tree) insert(data byte) {
 	if t.root == nil {
 		t.root = &Node{key: data}
 	} else {
-		t.root.insert(data)
+		t.root.insertBST(data)
 	}
 }
 
-func (n *Node) insert(data byte) {
+func (n *Node) insertBST(data byte) {
 	if data <= n.key {
 		if n.left == nil {
 			n.left = &Node{key: data}
 		} else {
-			n.left.insert(data)
+			n.left.insertBST(data)
 		}
 	} else {
 		if n.right == nil {
 			n.right = &Node{key: data}
 		} else {
-			n.right.insert(data)
+			n.right.insertBST(data)
 		}
 	}
 }
