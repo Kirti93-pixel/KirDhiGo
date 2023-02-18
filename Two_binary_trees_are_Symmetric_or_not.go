@@ -45,8 +45,8 @@ func (n *Node) insertBinaryTree(data byte) { //Level order transversal insertion
 	queue.Enqueue(n)
 
 	for !queue.IsEmpty() {
-		tmp, isTmp := queue.Dequeue()
-		if isTmp {
+		tmp, ok := queue.Dequeue()
+		if ok {
 			if tmp.left != nil {
 				queue.Enqueue(tmp.left)
 			} else {
