@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type node struct {
 	value string
@@ -46,10 +49,19 @@ func postorder(n *node) {
 	}
 }
 
+func maxDepth(n *node) int {
+    if n == nil {
+        return 0
+    }
+    leftLen := maxDepth(n.left)
+    rightLen := maxDepth(n.right)
+    return int(math.Max(float64(leftLen),float64(rightLen))) + 1
+}
+
 /* breadth first traversal */
 func breadth(n *node) {
 	if n != nil {
-		s := []*node{n}	
+		s := []*node{n}	//its a queue
 		for len(s) > 0 {
 			current_node := s[0]
 			fmt.Printf(current_node.value + " ")
@@ -79,6 +91,7 @@ func main() {
 	inorder(root)
 	fmt.Println("\nPost-order DFS traversal")
 	postorder(root)
+	fmt.Println("\nMaxDepth of a tree is", maxDepth(root))
 	fmt.Println("\nBFS traversal")
 	breadth(root)
 }
