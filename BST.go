@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type Tree struct {
 	root *Node
@@ -40,7 +43,7 @@ func printPreOrder(n *Node) {
 	if n == nil {
 		return
 	} else {
-		fmt.Println(string(n.key))
+		fmt.Print(string(n.key))
 		printPreOrder(n.left)
 		printPreOrder(n.right)
 	}
@@ -52,9 +55,8 @@ func printPostOrder(n *Node) {
 	} else {
 		printPostOrder(n.left)
 		printPostOrder(n.right)
-		fmt.Println(string(n.key))
+		fmt.Print(string(n.key))
 	}
-
 }
 
 func printInOrder(n *Node) {
@@ -62,11 +64,9 @@ func printInOrder(n *Node) {
 		return
 	} else {
 		printInOrder(n.left)
-		fmt.Println(string(n.key))
+		fmt.Print(string(n.key))
 		printInOrder(n.right)
-
 	}
-
 }
 
 func inorderTraversal(root *Node) []string {
@@ -100,6 +100,22 @@ func createBST(nums []byte, start, end int) *Node {
     }
 }
 
+//Check if the BST is balanced
+func isBalanced(root *Node) bool {
+    return getHeight(root) != -1
+}
+func getHeight(root *Node) int {
+    if root == nil {
+        return 0
+    }
+    leftH := getHeight(root.left)
+    rightH := getHeight(root.right)
+    if leftH == -1 || rightH == -1 || int(math.Abs(float64(leftH) - float64(rightH))) > 1 {
+        return -1
+    }
+    return int(math.Max(float64(leftH), float64(rightH)))+1
+}
+
 func main() {
 	t := &Tree{}
 	t.insert('F')
@@ -111,17 +127,21 @@ func main() {
 	t.insert('G')
 	t.insert('I')
 	t.insert('H')
-	fmt.Println("PreOrder:::")
+	fmt.Print("PreOrder:::")
 	printPreOrder(t.root)
-	fmt.Println("PostOrder:::")
+	fmt.Println()
+	fmt.Print("PostOrder:::")
 	printPostOrder(t.root)
-	fmt.Println("InOrder:::")
+	fmt.Println()
+	fmt.Print("InOrder:::")
 	printInOrder(t.root)
+	fmt.Println()
 	fmt.Println("Stored inordered transversal in an array:::", inorderTraversal(t.root))
+	fmt.Println("Is Tree balanced:", isBalanced(t.root))
 
 	nums := []byte{'A','B','C','D','E','F','G','H','I'} 
-	
-	fmt.Println("InOrder after sorted array converted to BST:::")
+	fmt.Print("InOrder after sorted array converted to BST:::")
 	printInOrder(sortedArrayToBST(nums))
+
 
 }
