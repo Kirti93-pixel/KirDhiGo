@@ -104,6 +104,7 @@ func createBST(nums []byte, start, end int) *Node {
 func isBalanced(root *Node) bool {
     return getHeight(root) != -1
 }
+
 func getHeight(root *Node) int {
     if root == nil {
         return 0
@@ -142,6 +143,4 @@ func main() {
 	nums := []byte{'A','B','C','D','E','F','G','H','I'} 
 	fmt.Print("InOrder after sorted array converted to BST:::")
 	printInOrder(sortedArrayToBST(nums))
-
-
 }
