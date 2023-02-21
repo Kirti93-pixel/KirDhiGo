@@ -84,6 +84,22 @@ func treeTransverse(node *Node, res *[]string) {
     treeTransverse(node.right, res)
 }
 
+//Convert Sorted array to BST:
+func sortedArrayToBST(nums []byte) *Node {
+    return createBST(nums, 0, len(nums))
+}
+
+func createBST(nums []byte, start, end int) *Node {
+    if start >= end {
+        return nil
+    }
+    return &Node{
+        key: nums[(start+end)/2], //will take upper bound, for 3.5 it will take 4
+        left: createBST(nums, start, (start+end)/2),
+        right: createBST(nums, ((start+end)/2)+1, end),
+    }
+}
+
 func main() {
 	t := &Tree{}
 	t.insert('F')
@@ -102,4 +118,10 @@ func main() {
 	fmt.Println("InOrder:::")
 	printInOrder(t.root)
 	fmt.Println("Stored inordered transversal in an array:::", inorderTraversal(t.root))
+
+	nums := []byte{'A','B','C','D','E','F','G','H','I'} 
+	
+	fmt.Println("InOrder after sorted array converted to BST:::")
+	printInOrder(sortedArrayToBST(nums))
+
 }
