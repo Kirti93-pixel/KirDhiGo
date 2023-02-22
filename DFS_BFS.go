@@ -56,10 +56,10 @@ func maxDepth(n *node) int {
     return int(math.Max(float64(leftLen),float64(rightLen))) + 1
 }
 
-func minDepth(root *node) int {
-    if root == nil {return 0}
+func minDepth(n *node) int {
+    if n == nil {return 0}
     mini := math.MaxInt32
-    dfsSearch(root, &mini, 0)
+    dfsSearch(n, &mini, 0)
     return mini+1
 }
 
