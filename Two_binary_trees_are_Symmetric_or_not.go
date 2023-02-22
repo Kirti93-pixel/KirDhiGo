@@ -92,6 +92,36 @@ func mirrorCheck(p,q *Node) bool {
     return mirrorCheck(p.left, q.right) && mirrorCheck(p.right, q.left)
 }
 
+//Find minDepth of a tree using BFS
+func minDepth(root *Node) int {
+    //Using BFS approach
+    if root == nil {
+        return 0
+    }
+    var queue Queue
+	queue.Enqueue(root)
+    lvl := 1
+    for !queue.IsEmpty() {
+        size := len(queue)
+        for i:=0; i<size; i++ {
+            tmp, ok := queue.Dequeue()
+            if ok {
+                if tmp.left == nil && tmp.right == nil {
+                    return lvl
+                }
+                if tmp.left != nil {
+                    queue.Enqueue(tmp.left)
+                }
+                if tmp.right != nil {
+                    queue.Enqueue(tmp.right)
+                }
+            }
+        }
+        lvl++
+    }
+    return lvl
+}
+
 func main() {
 	t := &Tree{}
 	t.insert('F')
@@ -105,6 +135,7 @@ func main() {
 	t.insert('H')
 
 	fmt.Println("Are Two trees symmetric:::", isSymmetric(t.root))
+	fmt.Println("MinDepth(using BFS) of a tree is", minDepth(t.root))
 
 	//Test Binary Tree insertion
 	// t1 := &Tree{

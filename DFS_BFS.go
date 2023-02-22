@@ -50,14 +50,29 @@ func postorder(n *node) {
 }
 
 func maxDepth(n *node) int {
-    if n == nil {
-        return 0
-    }
+	if n == nil {return 0}
     leftLen := maxDepth(n.left)
     rightLen := maxDepth(n.right)
     return int(math.Max(float64(leftLen),float64(rightLen))) + 1
 }
 
+func minDepth(root *node) int {
+    if root == nil {return 0}
+    mini := math.MaxInt32
+    dfsSearch(root, &mini, 0)
+    return mini+1
+}
+
+func dfsSearch(n *node, miniAdd *int, lvl int) {
+    if n != nil {
+        if n.left == nil && n.right == nil {
+            *miniAdd = int(math.Min(float64(*miniAdd), float64(lvl)))
+        } else {
+            dfsSearch(n.left, miniAdd, lvl+1)
+            dfsSearch(n.right, miniAdd, lvl+1)
+        }
+    }
+}
 /* breadth first traversal */
 func breadth(n *node) {
 	if n != nil {
@@ -91,7 +106,8 @@ func main() {
 	inorder(root)
 	fmt.Println("\nPost-order DFS traversal")
 	postorder(root)
-	fmt.Println("\nMaxDepth of a tree is", maxDepth(root))
-	fmt.Println("\nBFS traversal")
+	fmt.Println("\nMaxDepth(using DFS) of a tree is", maxDepth(root))
+	fmt.Println("MinDepth(using DFS) of a tree is", minDepth(root))
+	fmt.Println("BFS traversal")
 	breadth(root)
 }
