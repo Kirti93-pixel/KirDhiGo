@@ -1,7 +1,8 @@
 # KirDhiGo
 The repository contains the optimized Solutions (written in Golang) for various Computer Science and Data Structure &amp; Algorithmic Problems.
 
-Any file can run directly in any Go installed system using below command.
+Any file can run directly in any Go installed system.
+E.g.,
 
 `go run .\Valid_Parenthesis.go`
 
