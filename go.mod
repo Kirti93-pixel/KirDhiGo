@@ -1,3 +1,3 @@
-module Solutions_in_GO
+module KirDhiGo
 
 go 1.20
