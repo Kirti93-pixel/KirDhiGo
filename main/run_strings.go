@@ -7,13 +7,13 @@ import (
 
 func main() {
 	number := 0
-	fmt.Println("Input a number to execute any of the below:::")
+	fmt.Println("Select any one option to execute any of the below:::")
 	fmt.Println("1. Run Find_all_palindrome_partitions_in_a_string.go")
 	fmt.Println("2. Run KMP_Algorithm_String_Matching_algo.go")
 	fmt.Println("3. Run Length_of_the_last_word.go")
 	fmt.Println("4. Run Longest_Common_Prefix.go")
 
-	fmt.Print("number: ")
+	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
 	switch number {

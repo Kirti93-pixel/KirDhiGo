@@ -7,7 +7,7 @@ import (
 
 func main() {
 	number := 0
-	fmt.Println("Input a number to execute any of the below:::")
+	fmt.Println("Select any one option to execute any of the below:::")
 	fmt.Println("1. Binary_Search.go")
 	fmt.Println("2. Kadane_Algorithm_Maximum_sum_subarray.go")
 	fmt.Println("3. Median_for_array_merged_using_different_2_sized_arrays.go")
@@ -17,7 +17,7 @@ func main() {
 	fmt.Println("7. Remove_Duplicates_From_Array.go")
 	fmt.Println("8. Remove_Element.go")
 	fmt.Println("9. Search_Insert.go")
-	fmt.Print("number: ")
+	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
 	switch number {

@@ -7,13 +7,13 @@ import (
 
 func main() {
 	number := 0
-	fmt.Println("Input a number to execute any of the below:::")
+	fmt.Println("Select any one option to execute any of the below:::")
 	fmt.Println("1. Run Binary_Sum.go")
 	fmt.Println("2. Run Climb_Stairs.go")
 	fmt.Println("3. Run Square_Root.go")
 	fmt.Println("4. Run Valid_Parenthesis.go")
 
-	fmt.Print("number: ")
+	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
 	switch number {

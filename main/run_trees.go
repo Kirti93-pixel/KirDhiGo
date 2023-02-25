@@ -7,14 +7,14 @@ import (
 
 func main() {
 	number := 0
-	fmt.Println("Input a number to execute any of the below:::")
+	fmt.Println("Select any one option to execute any of the below:::")
 	fmt.Println("1. Run BST.go")
 	fmt.Println("2. Run DFS_BFS.go")
 	fmt.Println("3. Run Print_all_paths_of_a_tree.go")
 	fmt.Println("4. Run Two_binary_trees_are_Symmetric_or_not.go")
 	fmt.Println("5. Run Two_BSTs_Identical_or_not.go")
 
-	fmt.Print("number: ")
+	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
 	switch number {

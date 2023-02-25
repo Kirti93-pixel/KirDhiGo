@@ -7,13 +7,13 @@ import (
 
 func main() {
 	number := 0
-	fmt.Println("Input a number to execute any of the below:::")
+	fmt.Println("Select any one option to execute any of the below:::")
 	fmt.Println("1. Run Linked_List.go")
 	fmt.Println("2. Run Merge_2_sorted_LL.go")
 	fmt.Println("3. Run Remove_Duplicates_From_Sorted_LL.go")
 	fmt.Println("4. Run Remove_Elements_From_a_Sorted_LL_if_it_comes_multiple_times.go")
 
-	fmt.Print("number: ")
+	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
 	switch number {
