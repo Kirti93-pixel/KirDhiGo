@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/stack"
+	"github.com/Kirti93-pixel/KirDhiGo/stack"
 	"fmt"
 )
 

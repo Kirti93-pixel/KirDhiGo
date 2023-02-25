@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/arrays"
+	"github.com/Kirti93-pixel/KirDhiGo/arrays"
 	"fmt"
 )
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/queue"
+	"github.com/Kirti93-pixel/KirDhiGo/queue"
 	"fmt"
 )
 

@@ -1,3 +1,3 @@
-module KirDhiGo
+module github.com/Kirti93-pixel/KirDhiGo
 
 go 1.20

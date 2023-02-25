@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/linked_list"
+	"github.com/Kirti93-pixel/KirDhiGo/linked_list"
 	"fmt"
 )
 

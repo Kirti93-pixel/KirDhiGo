@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/others"
+	"github.com/Kirti93-pixel/KirDhiGo/others"
 	"fmt"
 )
 

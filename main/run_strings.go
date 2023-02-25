@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/strings"
+	"github.com/Kirti93-pixel/KirDhiGo/strings"
 	"fmt"
 )
 

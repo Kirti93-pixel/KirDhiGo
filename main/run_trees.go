@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KirDhiGo/trees"
+	"github.com/Kirti93-pixel/KirDhiGo/trees"
 	"fmt"
 )
 
