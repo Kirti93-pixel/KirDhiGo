@@ -1,4 +1,4 @@
-package main
+package ll
 
 import "fmt"
 
@@ -71,7 +71,7 @@ func printElements(list *ListNode) {
 	}
 }
 
-func main() {
+func Run_Merge_2_sorted_LL() {
 	var list1, list2 *ListNode
 	list1 = addNode(list1, 1)
 	list1 = addNode(list1, 2)
@@ -87,4 +87,5 @@ func main() {
 	list2 = addNode(list2, 230)
 	fmt.Print("After merging 1,2,4,6,9 and 3,5,7,8,90,230 ===>>> ")
 	printElements(mergeTwoLists(list1, list2))
+	fmt.Println()
 }

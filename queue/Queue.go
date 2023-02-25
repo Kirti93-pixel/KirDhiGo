@@ -1,4 +1,4 @@
-package main
+package queue
 
 import "fmt"
 
@@ -21,7 +21,7 @@ func (q *Queue) Dequeue() (string, bool) {
 	return elm, true
 }
 
-func main() {
+func Run_Queue() {
 	var myq Queue
 	myq.Enqueue("1")
 	myq.Enqueue("2")
@@ -32,3 +32,4 @@ func main() {
 		fmt.Println("val:", val, "ok:", ok)
 	}
 }
+

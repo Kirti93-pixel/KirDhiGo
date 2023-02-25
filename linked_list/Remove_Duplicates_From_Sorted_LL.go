@@ -1,11 +1,6 @@
-package main
+package ll
 
 import "fmt"
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
 
 func deleteDuplicates(head *ListNode) *ListNode {
 	if head == nil {
@@ -22,36 +17,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	return head
 }
 
-func addNode(ln *ListNode, val int) *ListNode {
-	if ln == nil {
-		return &ListNode{
-			Val:  val,
-			Next: nil,
-		}
-	}
-	tmp := ln
-	for tmp.Next != nil {
-		tmp = tmp.Next
-	}
-	tmp.Next = &ListNode{
-		Val:  val,
-		Next: nil,
-	}
-	return ln
-}
-
-func printElements(list *ListNode) {
-	for list != nil {
-		if list.Next == nil {
-			fmt.Print(list.Val)
-		} else {
-			fmt.Print(list.Val, ",")
-		}
-		list = list.Next
-	}
-}
-
-func main() {
+func Run_Remove_Duplicates_From_Sorted_LL() {
 	var list *ListNode
 	list = addNode(list, 1)
 	list = addNode(list, 1)
@@ -62,4 +28,5 @@ func main() {
 	list = addNode(list, 6)
 	fmt.Print("After deleting duplicates from list 1,1,2,2,3,3,6, the list is ")
 	printElements(deleteDuplicates(list))
+	fmt.Println()
 }

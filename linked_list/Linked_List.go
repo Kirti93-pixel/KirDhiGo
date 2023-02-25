@@ -1,4 +1,4 @@
-package main
+package ll
 
 import "fmt"
 
@@ -199,7 +199,7 @@ func (l *LL) GetLength() int {
 	return l.lenLL
 }
 
-func main() {
+func Run_Linked_List() {
 	var myl LL
 	myl.InsertAtFirst("1")
 	myl.GetAllElements()

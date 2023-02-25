@@ -1,4 +1,4 @@
-package main
+package strings
 
 import "fmt"
 
@@ -45,7 +45,7 @@ func computeTemporaryArray(pat string) []int {
 	return lps
 }
 
-func main() {
+func Run_KMP_Algorithm_String_Matching_algo() {
 	fmt.Println("KMP String matching algorithm")
 	text := "abshdbfudmabcabydgfjrndkf"
 	pat := "abcaby"

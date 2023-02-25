@@ -1,4 +1,4 @@
-package main
+package others
 
 import (
 	"fmt"
@@ -63,7 +63,7 @@ func binarySumUsingMaths(a,b,carry int) (int,int) { //sum(using modulus),carry(u
     return (a + b + carry)%2, (a + b + carry)/2
 }
 
-func main() {
+func Run_Binary_Sum() {
 	fmt.Println("Binary sum of 1100 & 10 is:::", addBinary("1100", "10"))
 	fmt.Println("Binary sum of 1111 & 1111 is:::", addBinary("1111", "1111"))
 	fmt.Println("Binary sum of 110010 & 10001 is:::", addBinary("110010", "10001"))

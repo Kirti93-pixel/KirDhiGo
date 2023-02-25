@@ -1,4 +1,4 @@
-package main
+package arrays
 
 import "fmt"
 
@@ -20,6 +20,6 @@ func removeDuplicates(nums []int) int {
 	return insertIdx
 }
 
-func main() {
+func Run_Remove_Duplicates_From_Array() {
 	fmt.Println("After removing duplicates, the length is::::", removeDuplicates([]int{1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8}))
 }

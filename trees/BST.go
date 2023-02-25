@@ -1,45 +1,45 @@
-package main
+package trees
 
 import (
 	"fmt"
 	"math"
 )
 
-type Tree struct {
-	root *Node
+type TreeNodeDataByte struct {
+	root *NodeDataByte
 }
 
-type Node struct {
+type NodeDataByte struct {
 	key   byte
-	left  *Node
-	right *Node
+	left  *NodeDataByte
+	right *NodeDataByte
 }
 
-func (t *Tree) insert(data byte) {
+func (t *TreeNodeDataByte) InsertBST(data byte) {
 	if t.root == nil {
-		t.root = &Node{key: data}
+		t.root = &NodeDataByte{key: data}
 	} else {
 		t.root.insert(data)
 	}
 }
 
-func (n *Node) insert(data byte) {
+func (n *NodeDataByte) insert(data byte) {
 	if data <= n.key {
 		if n.left == nil {
-			n.left = &Node{key: data}
+			n.left = &NodeDataByte{key: data}
 		} else {
 			n.left.insert(data)
 		}
 	} else {
 		if n.right == nil {
-			n.right = &Node{key: data}
+			n.right = &NodeDataByte{key: data}
 		} else {
 			n.right.insert(data)
 		}
 	}
 }
 
-func printPreOrder(n *Node) {
+func printPreOrder(n *NodeDataByte) {
 	if n == nil {
 		return
 	} else {
@@ -49,7 +49,7 @@ func printPreOrder(n *Node) {
 	}
 }
 
-func printPostOrder(n *Node) {
+func printPostOrder(n *NodeDataByte) {
 	if n == nil {
 		return
 	} else {
@@ -59,7 +59,7 @@ func printPostOrder(n *Node) {
 	}
 }
 
-func printInOrder(n *Node) {
+func printInOrder(n *NodeDataByte) {
 	if n == nil {
 		return
 	} else {
@@ -69,13 +69,13 @@ func printInOrder(n *Node) {
 	}
 }
 
-func inorderTraversal(root *Node) []string {
+func inorderTraversal(root *NodeDataByte) []string {
     res := make([]string, 0)
     treeTransverse(root, &res)
     return res
 }
 
-func treeTransverse(node *Node, res *[]string) {
+func treeTransverse(node *NodeDataByte, res *[]string) {
     if node == nil {
         return
     }
@@ -85,15 +85,15 @@ func treeTransverse(node *Node, res *[]string) {
 }
 
 //Convert Sorted array to BST:
-func sortedArrayToBST(nums []byte) *Node {
+func sortedArrayToBST(nums []byte) *NodeDataByte {
     return createBST(nums, 0, len(nums))
 }
 
-func createBST(nums []byte, start, end int) *Node {
+func createBST(nums []byte, start, end int) *NodeDataByte {
     if start >= end {
         return nil
     }
-    return &Node{
+    return &NodeDataByte{
         key: nums[(start+end)/2], //will take upper bound, for 3.5 it will take 4
         left: createBST(nums, start, (start+end)/2),
         right: createBST(nums, ((start+end)/2)+1, end),
@@ -101,11 +101,11 @@ func createBST(nums []byte, start, end int) *Node {
 }
 
 //Check if the BST is balanced
-func isBalanced(root *Node) bool {
+func isBalanced(root *NodeDataByte) bool {
     return getHeight(root) != -1
 }
 
-func getHeight(root *Node) int {
+func getHeight(root *NodeDataByte) int {
     if root == nil {
         return 0
     }
@@ -117,17 +117,17 @@ func getHeight(root *Node) int {
     return int(math.Max(float64(leftH), float64(rightH)))+1
 }
 
-func main() {
-	t := &Tree{}
-	t.insert('F')
-	t.insert('B')
-	t.insert('A')
-	t.insert('D')
-	t.insert('C')
-	t.insert('E')
-	t.insert('G')
-	t.insert('I')
-	t.insert('H')
+func Run_BST() {
+	t := &TreeNodeDataByte{}
+	t.InsertBST('F')
+	t.InsertBST('B')
+	t.InsertBST('A')
+	t.InsertBST('D')
+	t.InsertBST('C')
+	t.InsertBST('E')
+	t.InsertBST('G')
+	t.InsertBST('I')
+	t.InsertBST('H')
 	fmt.Print("PreOrder:::")
 	printPreOrder(t.root)
 	fmt.Println()

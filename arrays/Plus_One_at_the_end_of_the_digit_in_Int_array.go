@@ -1,4 +1,4 @@
-package main
+package arrays
 
 import "fmt"
 
@@ -27,7 +27,7 @@ func prepend(x []int, y int) []int {
     return x
 }
 
-func main() {
+func Run_Plus_One_at_the_end_of_the_digit_in_Int_array() {
 	fmt.Println("After adding plus One to [1,4,5], the array is:::", plusOne([]int{1,4,5}))
 	fmt.Println("After adding plus One to [1,4,9], the array is:::", plusOne([]int{1,4,9}))
 	fmt.Println("After adding plus One to [9,0,9], the array is:::", plusOne([]int{9,0,9}))

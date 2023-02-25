@@ -1,4 +1,4 @@
-package main
+package stack
 
 import "fmt"
 
@@ -22,7 +22,7 @@ func (s *Stack) Pop() (string, bool) {
 	return resStr, true
 }
 
-func main() {
+func Run_Stack() {
 	var st Stack
 	st.Push("1")
 	st.Push("2")

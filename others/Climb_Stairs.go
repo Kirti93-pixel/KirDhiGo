@@ -1,4 +1,4 @@
-package main
+package others
 
 import "fmt"
 
@@ -15,7 +15,7 @@ func climbStairs(n int) int {
 	return ways
 }
 
-func main() {
+func Run_Climb_Stairs() {
 	fmt.Println("Number of ways to climb 5th stair::", climbStairs(5))
 	fmt.Println("Number of ways to climb 3rd stair::", climbStairs(3))
 	fmt.Println("Number of ways to climb 18th stair::", climbStairs(18))

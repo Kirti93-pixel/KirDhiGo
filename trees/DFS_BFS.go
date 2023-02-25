@@ -1,29 +1,29 @@
-package main
+package trees
 
 import (
 	"fmt"
 	"math"
 )
 
-type node struct {
+type NodeValueString struct {
 	value string
-	left  *node
-	right *node
+	left  *NodeValueString
+	right *NodeValueString
 }
 
-func insert(n *node, v string) *node {
+func InsertBST2(n *NodeValueString, v string) *NodeValueString {
 	if n == nil {
-		return &node{v, nil, nil}
+		return &NodeValueString{v, nil, nil}
 	} else if v <= n.value {
-		n.left = insert(n.left, v)
+		n.left = InsertBST2(n.left, v)
 	} else {
-		n.right = insert(n.right, v)
+		n.right = InsertBST2(n.right, v)
 	}
 	return n
 }
 
 /* pre-oder DFS traversal */
-func preorder(n *node) {
+func preorder(n *NodeValueString) {
 	if n != nil {
 		fmt.Printf(n.value + " ")
 		preorder(n.left)
@@ -32,7 +32,7 @@ func preorder(n *node) {
 }
 
 /* in-oder DFS traversal */
-func inorder(n *node) {
+func inorder(n *NodeValueString) {
 	if n != nil {
 		inorder(n.left)
 		fmt.Printf(n.value + " ")
@@ -41,7 +41,7 @@ func inorder(n *node) {
 }
 
 /* post-oder DFS traversal */
-func postorder(n *node) {
+func postorder(n *NodeValueString) {
 	if n != nil {
 		postorder(n.left)
 		postorder(n.right)
@@ -49,21 +49,21 @@ func postorder(n *node) {
 	}
 }
 
-func maxDepth(n *node) int {
+func maxDepth(n *NodeValueString) int {
 	if n == nil {return 0}
     leftLen := maxDepth(n.left)
     rightLen := maxDepth(n.right)
     return int(math.Max(float64(leftLen),float64(rightLen))) + 1
 }
 
-func minDepth(n *node) int {
+func minDepthDFS(n *NodeValueString) int {
     if n == nil {return 0}
     mini := math.MaxInt32
     dfsSearch(n, &mini, 0)
     return mini+1
 }
 
-func dfsSearch(n *node, miniAdd *int, lvl int) {
+func dfsSearch(n *NodeValueString, miniAdd *int, lvl int) {
     if n != nil {
         if n.left == nil && n.right == nil {
             *miniAdd = int(math.Min(float64(*miniAdd), float64(lvl)))
@@ -74,9 +74,9 @@ func dfsSearch(n *node, miniAdd *int, lvl int) {
     }
 }
 /* breadth first traversal */
-func breadth(n *node) {
+func breadth(n *NodeValueString) {
 	if n != nil {
-		s := []*node{n}	//its a queue
+		s := []*NodeValueString{n}	//its a queue
 		for len(s) > 0 {
 			current_node := s[0]
 			fmt.Printf(current_node.value + " ")
@@ -91,15 +91,15 @@ func breadth(n *node) {
 	}
 }
 
-func main() {
-	var root *node
-	root = insert(root, "7")
-	root = insert(root, "4")
-	root = insert(root, "3")
-	root = insert(root, "1")
-	root = insert(root, "8")
-	root = insert(root, "9")
-	root = insert(root, "5")
+func Run_DFS_BFS() {
+	var root *NodeValueString
+	root = InsertBST2(root, "7")
+	root = InsertBST2(root, "4")
+	root = InsertBST2(root, "3")
+	root = InsertBST2(root, "1")
+	root = InsertBST2(root, "8")
+	root = InsertBST2(root, "9")
+	root = InsertBST2(root, "5")
 	fmt.Println("Pre-order DFS traversal")
 	preorder(root)
 	fmt.Println("\nIn-order DFS traversal")
@@ -107,7 +107,7 @@ func main() {
 	fmt.Println("\nPost-order DFS traversal")
 	postorder(root)
 	fmt.Println("\nMaxDepth(using DFS) of a tree is", maxDepth(root))
-	fmt.Println("MinDepth(using DFS) of a tree is", minDepth(root))
+	fmt.Println("MinDepth(using DFS) of a tree is", minDepthDFS(root))
 	fmt.Println("BFS traversal")
 	breadth(root)
 }

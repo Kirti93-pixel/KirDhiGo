@@ -1,42 +1,42 @@
-package main
+package trees
 
 import "fmt"
 
-type Node struct {
+type NodeDataString struct {
 	data  string
-	left  *Node
-	right *Node
+	left  *NodeDataString
+	right *NodeDataString
 }
 
-type Tree struct {
-	root *Node
+type TreeNodeDataString struct {
+	root *NodeDataString
 }
 
-func (t *Tree) Insert(v string) {
+func (t *TreeNodeDataString) InsertBST3(v string) {
 	if t.root == nil {
-		t.root = &Node{data: v}
+		t.root = &NodeDataString{data: v}
 	} else {
-		t.root.Insert(v)
+		t.root.insert(v)
 	}
 }
 
-func (n *Node) Insert(v string) {
+func (n *NodeDataString) insert(v string) {
 	if v <= n.data {
 		if n.left == nil {
-			n.left = &Node{data: v}
+			n.left = &NodeDataString{data: v}
 		} else {
-			n.left.Insert(v)
+			n.left.insert(v)
 		}
 	} else {
 		if n.right == nil {
-			n.right = &Node{data: v}
+			n.right = &NodeDataString{data: v}
 		} else {
-			n.right.Insert(v)
+			n.right.insert(v)
 		}
 	}
 }
 
-func (n *Node) GetAllPaths(path []string, res *[][]string) {
+func (n *NodeDataString) GetAllPaths(path []string, res *[][]string) {
 	if n == nil {
 		return
 	}
@@ -49,15 +49,15 @@ func (n *Node) GetAllPaths(path []string, res *[][]string) {
 	}
 }
 
-func main() {
-	t := &Tree{}
-	t.Insert("5")
-	t.Insert("3")
-	t.Insert("2")
-	t.Insert("4")
-	t.Insert("7")
-	t.Insert("6")
-	t.Insert("9")
+func Run_Print_all_paths_of_a_tree() {
+	t := &TreeNodeDataString{}
+	t.InsertBST3("5")
+	t.InsertBST3("3")
+	t.InsertBST3("2")
+	t.InsertBST3("4")
+	t.InsertBST3("7")
+	t.InsertBST3("6")
+	t.InsertBST3("9")
 	path := make([]string, 0)
 	res := make([][]string, 0)
 	t.root.GetAllPaths(path, &res)

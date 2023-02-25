@@ -1,29 +1,19 @@
 
-package main
+package trees
 
 import "fmt"
 
-type Tree struct {
-	root *Node
-}
-
-type Node struct {
-	key   byte
-	left  *Node
-	right *Node
-}
-
-type Queue []*Node
+type Queue []*NodeDataByte
 
 func (q *Queue) IsEmpty() bool {
 	return len(*q) == 0
 }
 
-func (q *Queue) Enqueue(n *Node) {
+func (q *Queue) Enqueue(n *NodeDataByte) {
 	*q = append(*q, n)
 }
 
-func (q *Queue) Dequeue() (*Node, bool) {
+func (q *Queue) Dequeue() (*NodeDataByte, bool) {
 	if q.IsEmpty() {
 		return nil, false
 	}
@@ -32,15 +22,15 @@ func (q *Queue) Dequeue() (*Node, bool) {
 	return node, true
 }
 
-func (t *Tree) insert(data byte) {
+func (t *TreeNodeDataByte) InsertBinaryTree(data byte) {
 	if t.root == nil {
-		t.root = &Node{key: data}
+		t.root = &NodeDataByte{key: data}
 	} else {
-		t.root.insertBinaryTree(data)
+		t.root.insertBTree(data)
 	}
 }
 
-func (n *Node) insertBinaryTree(data byte) { //Level order transversal insertion
+func (n *NodeDataByte) insertBTree(data byte) { //Level order transversal insertion
 	var queue Queue
 	queue.Enqueue(n)
 
@@ -50,7 +40,7 @@ func (n *Node) insertBinaryTree(data byte) { //Level order transversal insertion
 			if tmp.left != nil {
 				queue.Enqueue(tmp.left)
 			} else {
-				tmp.left = &Node{
+				tmp.left = &NodeDataByte{
 					key:data,
 				}
 				return
@@ -59,7 +49,7 @@ func (n *Node) insertBinaryTree(data byte) { //Level order transversal insertion
 			if tmp.right != nil {
 				queue.Enqueue(tmp.right)
 			} else {
-				tmp.right = &Node{
+				tmp.right = &NodeDataByte{
 					key:data,
 				}
 				return
@@ -68,21 +58,11 @@ func (n *Node) insertBinaryTree(data byte) { //Level order transversal insertion
 	}
 }
 
-func printInOrder(n *Node) {
-	if n == nil {
-		return
-	} else {
-		printInOrder(n.left)
-		fmt.Println(string(n.key))
-		printInOrder(n.right)
-	}
-}
-
-func isSymmetric(root *Node) bool {
+func isSymmetric(root *NodeDataByte) bool {
     return mirrorCheck(root.left, root.right)
 }
 
-func mirrorCheck(p,q *Node) bool {
+func mirrorCheck(p,q *NodeDataByte) bool {
     if p == nil && q == nil {
         return true
     }
@@ -93,7 +73,7 @@ func mirrorCheck(p,q *Node) bool {
 }
 
 //Find minDepth of a tree using BFS
-func minDepth(root *Node) int {
+func minDepthBFS(root *NodeDataByte) int {
     //Using BFS approach
     if root == nil {
         return 0
@@ -122,20 +102,20 @@ func minDepth(root *Node) int {
     return lvl
 }
 
-func main() {
-	t := &Tree{}
-	t.insert('F')
-	t.insert('B')
-	t.insert('A')
-	t.insert('D')
-	t.insert('C')
-	t.insert('E')
-	t.insert('G')
-	t.insert('I')
-	t.insert('H')
+func Run_Two_binary_trees_are_Symmetric_or_not() {
+	t := &TreeNodeDataByte{}
+	t.InsertBinaryTree('F')
+	t.InsertBinaryTree('B')
+	t.InsertBinaryTree('A')
+	t.InsertBinaryTree('D')
+	t.InsertBinaryTree('C')
+	t.InsertBinaryTree('E')
+	t.InsertBinaryTree('G')
+	t.InsertBinaryTree('I')
+	t.InsertBinaryTree('H')
 
 	fmt.Println("Are Two trees symmetric:::", isSymmetric(t.root))
-	fmt.Println("MinDepth(using BFS) of a tree is", minDepth(t.root))
+	fmt.Println("MinDepth(using BFS) of a tree is", minDepthBFS(t.root))
 
 	//Test Binary Tree insertion
 	// t1 := &Tree{

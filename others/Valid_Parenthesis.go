@@ -1,4 +1,4 @@
-package main
+package others
 
 import "fmt"
 
@@ -45,7 +45,7 @@ func (s *Stack) Pop() (string, bool) {
 	return resStr, true
 }
 
-func main() {
+func Run_Valid_Parenthesis() {
 	fmt.Println("Is parenthesis valid {}[]() ::::", isValid("{}[]()"))
 	fmt.Println("Is parenthesis valid {}[](  ::::", isValid("{}[]("))
 	fmt.Println("Is parenthesis valid {}() ::::", isValid("{}()"))

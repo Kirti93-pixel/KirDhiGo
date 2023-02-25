@@ -1,4 +1,4 @@
-package main
+package arrays
 
 import "fmt"
 
@@ -28,7 +28,7 @@ func removeElementOpt(nums []int, val int) int {
 	return n
 }
 
-func main() {
+func Run_Remove_Element() {
 	fmt.Println("Len after removal is:::", removeElement([]int{1, 2, 4, 5, 6, 7}, 4))
 	fmt.Println("Len after removal with Optimized logic is:::", removeElementOpt([]int{1, 2, 4, 5, 6, 7}, 4))
 }

@@ -1,4 +1,4 @@
-package main
+package others
 
 import (
 	"fmt"
@@ -39,7 +39,7 @@ func squareRootBinarySearch(x int) int {
 	return ans
 }
 
-func main() {
+func Run_Square_Root() {
 	fmt.Println("squareRoot for 16 is:::", squareRoot(16))
 	fmt.Println("squareRootBinarySearch for 80 is:::", squareRootBinarySearch(80))
 }

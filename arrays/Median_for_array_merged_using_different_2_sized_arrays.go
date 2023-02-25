@@ -1,4 +1,4 @@
-package main
+package arrays
 
 import (
 	"fmt"
@@ -72,7 +72,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	return -1
 }
 
-func main() {
+func Run_Median_for_array_merged_using_different_2_sized_arrays() {
 	//a := []int32{1, 3, 8, 9, 15}
 	//b := []int32{7, 11, 19, 21, 22, 25}  both testcases ans 11
 	//a := []int32{2, 3, 5, 8}

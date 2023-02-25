@@ -1,4 +1,4 @@
-package main
+package strings
 
 import "fmt"
 
@@ -33,7 +33,7 @@ func IsPalindrome(str string, start, end int) bool {
 	return true
 }
 
-func main() {
+func Run_Find_all_palindrome_partitions_in_a_string() {
 	s := "aabba"
 	path := make([]string, 0)
 	result := make([][]string, 0)

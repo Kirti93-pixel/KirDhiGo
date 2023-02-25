@@ -1,4 +1,4 @@
-package main
+package strings
 
 import "fmt"
 
@@ -19,7 +19,7 @@ func lengthOfLastWord(s string) int {
     return count
 }
 
-func main() {
+func Run_Length_of_the_last_word() {
 	fmt.Println("Length of the last word in \"Hello World\" is:::", lengthOfLastWord("Hello World"))
 	fmt.Println("Length of the last word in \"Hello World KirtiDhi   \" is:::", lengthOfLastWord("Hello World KirtiDhi   "))
 }
