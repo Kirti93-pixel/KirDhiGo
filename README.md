@@ -4,7 +4,8 @@ The repository contains the optimized Solutions (written in Golang) for various 
 Any file can run directly in any Go installed system.
 E.g.,
 
-`go run .\others\Valid_Parenthesis.go`
 `go run .\trees\BST.go`
+
+`go run .\others\Valid_Parenthesis.go`
 
 WIP for more Solutions, Happy Coding :)
