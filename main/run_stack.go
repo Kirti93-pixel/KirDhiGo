@@ -18,5 +18,7 @@ func main() {
 		fmt.Println("=====================")
 		stack.Run_Stack()
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }

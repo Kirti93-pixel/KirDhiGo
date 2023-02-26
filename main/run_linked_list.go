@@ -45,5 +45,7 @@ func main() {
 			ll.Run_Remove_Elements_From_a_Sorted_LL_if_it_comes_multiple_times()
 		}
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }

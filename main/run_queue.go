@@ -18,5 +18,7 @@ func main() {
 		fmt.Println("=====================")
 		queue.Run_Queue()
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }

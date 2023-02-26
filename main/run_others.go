@@ -53,5 +53,7 @@ func main() {
 			others.Run_Pascals_Triangle()
 		}
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }

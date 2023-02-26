@@ -84,5 +84,7 @@ func main() {
 			arrays.Run_Search_Insert()
 		}
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }

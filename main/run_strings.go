@@ -45,5 +45,7 @@ func main() {
 			strings.Run_Longest_Common_Prefix()
 		}
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }

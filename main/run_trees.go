@@ -61,5 +61,7 @@ func main() {
 			trees.Run_Has_path_sum()
 		}
 		fmt.Println("=====================")
+	default:
+		fmt.Println("Please enter valid option.")
 	}
 }
