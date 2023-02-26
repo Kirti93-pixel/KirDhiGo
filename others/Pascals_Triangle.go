@@ -42,9 +42,10 @@ func getRow(rowIndex int) []int {
     if rowIndex == 1 {
         return mainL[rowIndex]
     }
+    Li := make([]int, 0)
     if rowIndex > 1 {
         for i:=2; i<=rowIndex;i++ {
-            Li := make([]int, 0)
+            Li = make([]int, 0)
             Li = append(Li, 1)
             for j:=1;j<i;j++ {
                 Li = append(Li, mainL[1][j-1]+mainL[1][j])
