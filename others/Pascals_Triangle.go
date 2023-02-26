@@ -31,14 +31,14 @@ func generate(numRows int) [][]int {
 }
 
 func getRow(rowIndex int) []int {
-    mainL := make([][]int, 0)
+    mainL := make([][]int, 2)
     L0 := []int{1}
-    mainL = append(mainL, L0)
+    mainL[0] = L0
     if rowIndex == 0 {
         return mainL[rowIndex]
     }
     L1 := []int{1,1}
-    mainL = append(mainL, L1)
+    mainL[1] = L1
     if rowIndex == 1 {
         return mainL[rowIndex]
     }
@@ -47,13 +47,14 @@ func getRow(rowIndex int) []int {
             Li := make([]int, 0)
             Li = append(Li, 1)
             for j:=1;j<i;j++ {
-                Li = append(Li, mainL[i-1][j-1]+mainL[i-1][j])
+                Li = append(Li, mainL[1][j-1]+mainL[1][j])
             }
             Li = append(Li, 1)
-            mainL = append(mainL, Li)
+            mainL[0] = mainL[1]
+            mainL[1] = Li
         }
     }
-    return mainL[rowIndex]
+    return mainL[1]
 }
 
 func Run_Pascals_Triangle() {
