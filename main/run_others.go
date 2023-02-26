@@ -12,6 +12,7 @@ func main() {
 	fmt.Println("2. Run Climb_Stairs.go")
 	fmt.Println("3. Run Square_Root.go")
 	fmt.Println("4. Run Valid_Parenthesis.go")
+	fmt.Println("5. Run Pascals_Triangle.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -43,6 +44,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 4 {
 			others.Run_Valid_Parenthesis()
+		}
+		fmt.Println("=====================")
+	case 5:
+		fmt.Println("Hence running Pascals_Triangle.go")
+		fmt.Println("=====================")
+		if number == 5 {
+			others.Run_Pascals_Triangle()
 		}
 		fmt.Println("=====================")
 	}
