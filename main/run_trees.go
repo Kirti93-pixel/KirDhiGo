@@ -13,6 +13,7 @@ func main() {
 	fmt.Println("3. Run Print_all_paths_of_a_tree.go")
 	fmt.Println("4. Run Two_binary_trees_are_Symmetric_or_not.go")
 	fmt.Println("5. Run Two_BSTs_Identical_or_not.go")
+	fmt.Println("6. Run Has_path_sum.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -51,6 +52,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 5 {
 			trees.Run_Two_BSTs_Identical_or_not()
+		}
+		fmt.Println("=====================")
+	case 6:
+		fmt.Println("Hence running Has_path_sum.go")
+		fmt.Println("=====================")
+		if number == 6 {
+			trees.Run_Has_path_sum()
 		}
 		fmt.Println("=====================")
 	}
