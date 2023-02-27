@@ -17,6 +17,7 @@ func main() {
 	fmt.Println("7. Remove_Duplicates_From_Array.go")
 	fmt.Println("8. Remove_Element.go")
 	fmt.Println("9. Search_Insert.go")
+	fmt.Println("10. Single_Number.go")
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
@@ -82,6 +83,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 9 {
 			arrays.Run_Search_Insert()
+		}
+		fmt.Println("=====================")
+	case 10:
+		fmt.Println("Hence running Single_Number.go")
+		fmt.Println("=====================")
+		if number == 10 {
+			arrays.Run_Single_Number()
 		}
 		fmt.Println("=====================")
 	default:
