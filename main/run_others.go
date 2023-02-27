@@ -14,6 +14,7 @@ func main() {
 	fmt.Println("4. Run Valid_Parenthesis.go")
 	fmt.Println("5. Run Pascals_Triangle.go")
 	fmt.Println("6. Run Buy_and_Sell_Stock.go")
+	fmt.Println("7. Run Is_Palindrome.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -59,6 +60,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 6 {
 			others.Run_Buy_and_Sell_Stock()
+		}
+		fmt.Println("=====================")
+	case 7:
+		fmt.Println("Hence running Is_Palindrome.go")
+		fmt.Println("=====================")
+		if number == 7 {
+			others.Run_Is_Palindrome()
 		}
 		fmt.Println("=====================")
 	default:
