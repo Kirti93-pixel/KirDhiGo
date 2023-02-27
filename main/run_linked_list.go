@@ -12,6 +12,7 @@ func main() {
 	fmt.Println("2. Run Merge_2_sorted_LL.go")
 	fmt.Println("3. Run Remove_Duplicates_From_Sorted_LL.go")
 	fmt.Println("4. Run Remove_Elements_From_a_Sorted_LL_if_it_comes_multiple_times.go")
+	fmt.Println("5. Run Has_Cycle.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -43,6 +44,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 4 {
 			ll.Run_Remove_Elements_From_a_Sorted_LL_if_it_comes_multiple_times()
+		}
+		fmt.Println("=====================")
+	case 5:
+		fmt.Println("Hence running Has_Cycle.go")
+		fmt.Println("=====================")
+		if number == 5 {
+			ll.Run_Has_Cycle()
 		}
 		fmt.Println("=====================")
 	default:
