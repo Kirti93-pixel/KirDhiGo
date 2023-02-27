@@ -13,6 +13,7 @@ func main() {
 	fmt.Println("3. Run Square_Root.go")
 	fmt.Println("4. Run Valid_Parenthesis.go")
 	fmt.Println("5. Run Pascals_Triangle.go")
+	fmt.Println("6. Run Buy_and_Sell_Stock.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -51,6 +52,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 5 {
 			others.Run_Pascals_Triangle()
+		}
+		fmt.Println("=====================")
+	case 6:
+		fmt.Println("Hence running Buy_and_Sell_Stock.go")
+		fmt.Println("=====================")
+		if number == 6 {
+			others.Run_Buy_and_Sell_Stock()
 		}
 		fmt.Println("=====================")
 	default:
