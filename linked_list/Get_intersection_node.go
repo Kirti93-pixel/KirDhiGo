@@ -32,7 +32,7 @@ func Run_Get_intersection_node() {
 	list1 = addNode(list1, 1)
 	list1 = addNode(list1, 2)
 	list1 = addNode(list1, 4)
-	tmp1 = addNodeAtLast(list1, 89)
+	tmp1 = addNodeAndReturnNode(list1, 89)
 	list1 = addNode(list1, 7)
 	list1 = addNode(list1, 9)
 
@@ -48,7 +48,7 @@ func Run_Get_intersection_node() {
 	fmt.Println(res.Val)
 }
 
-func addNodeAtLast(ln *ListNode, val int) *ListNode {
+func addNodeAndReturnNode(ln *ListNode, val int) *ListNode {
 	if ln == nil {
 		return &ListNode{
 			Val:  val,
