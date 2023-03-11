@@ -16,6 +16,7 @@ func main() {
 	fmt.Println("6. Run Buy_and_Sell_Stock.go")
 	fmt.Println("7. Run Is_Palindrome.go")
 	fmt.Println("8. Run Covert_excel_column_to_Alphabet_Name.go")
+	fmt.Println("9. Run Majority_Element.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -75,6 +76,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 8 {
 			others.Run_Covert_excel_column_to_Alphabet_Name()
+		}
+		fmt.Println("=====================")	
+	case 9:
+		fmt.Println("Hence running Majority_Element.go")
+		fmt.Println("=====================")
+		if number == 9 {
+			others.Run_Majority_Element()
 		}
 		fmt.Println("=====================")		
 	default:
