@@ -15,6 +15,7 @@ func main() {
 	fmt.Println("5. Run Pascals_Triangle.go")
 	fmt.Println("6. Run Buy_and_Sell_Stock.go")
 	fmt.Println("7. Run Is_Palindrome.go")
+	fmt.Println("8. Run Covert_excel_column_to_Alphabet_Name.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -69,6 +70,13 @@ func main() {
 			others.Run_Is_Palindrome()
 		}
 		fmt.Println("=====================")
+	case 8:
+		fmt.Println("Hence running Covert_excel_column_to_Alphabet_Name.go")
+		fmt.Println("=====================")
+		if number == 8 {
+			others.Run_Covert_excel_column_to_Alphabet_Name()
+		}
+		fmt.Println("=====================")		
 	default:
 		fmt.Println("Please enter valid option.")
 	}
