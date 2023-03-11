@@ -17,6 +17,7 @@ func main() {
 	fmt.Println("7. Run Is_Palindrome.go")
 	fmt.Println("8. Run Covert_excel_column_to_Alphabet_Name.go")
 	fmt.Println("9. Run Excel_Title_to_Number.go")
+	fmt.Println("10. Run Reverse_bits.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -76,6 +77,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 9 {
 			others.Run_Excel_Title_to_Number()
+		}
+		fmt.Println("=====================")
+	case 10:
+		fmt.Println("Hence running Reverse_bits.go")
+		fmt.Println("=====================")
+		if number == 10 {
+			others.Run_Reverse_bits()
 		}
 		fmt.Println("=====================")			
 	default:
