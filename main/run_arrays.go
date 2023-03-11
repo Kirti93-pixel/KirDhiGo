@@ -18,6 +18,8 @@ func main() {
 	fmt.Println("8. Remove_Element.go")
 	fmt.Println("9. Search_Insert.go")
 	fmt.Println("10. Single_Number.go")
+	fmt.Println("11. Majority_Element.go")
+	
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
@@ -90,6 +92,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 10 {
 			arrays.Run_Single_Number()
+		}
+		fmt.Println("=====================")
+	case 11:
+		fmt.Println("Hence running Majority_Element.go")
+		fmt.Println("=====================")
+		if number == 11 {
+			arrays.Run_Majority_Element()
 		}
 		fmt.Println("=====================")
 	default:
