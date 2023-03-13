@@ -18,6 +18,7 @@ func main() {
 	fmt.Println("8. Run Covert_excel_column_to_Alphabet_Name.go")
 	fmt.Println("9. Run Excel_Title_to_Number.go")
 	fmt.Println("10. Run Reverse_bits.go")
+	fmt.Println("11. Run Hamming_weight.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -85,7 +86,14 @@ func main() {
 		if number == 10 {
 			others.Run_Reverse_bits()
 		}
-		fmt.Println("=====================")			
+		fmt.Println("=====================")
+	case 11:
+		fmt.Println("Hence running Hamming_weight.go")
+		fmt.Println("=====================")
+		if number == 11 {
+			others.Run_Hamming_weight()
+		}
+		fmt.Println("=====================")	
 	default:
 		fmt.Println("Please enter valid option.")
 	}
