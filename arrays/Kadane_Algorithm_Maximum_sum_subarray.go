@@ -3,7 +3,7 @@ package arrays
 import "fmt"
 
 func kadane(arr []int) int {
-	n, sum, max := len(arr), 0, 0
+	n, sum, max, maxNum := len(arr), 0, 0, arr[0]
 	for i := 0; i < n; i++ {
 		sum = sum + arr[i]
 		if sum > 0 {
@@ -13,7 +13,15 @@ func kadane(arr []int) int {
 		} else {
 			sum = 0
 		}
+		
+		if arr[i] > maxNum {
+			maxNum = arr[i]
+		}
 	}
+	if maxNum < 0 { //if all are non-positive numbers
+		max = maxNum
+	}
+
 	return max
 }
 
