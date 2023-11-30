@@ -13,6 +13,7 @@ func main() {
 	fmt.Println("3. Run Length_of_the_last_word.go")
 	fmt.Println("4. Run Longest_Common_Prefix.go")
 	fmt.Println("5. Run Find_all_substrings_of_a_string.go")
+	fmt.Println("6. Run Run_Find_all_contiguous_substrings_of_a_string.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -52,7 +53,14 @@ func main() {
 		if number == 5 {
 			strings.Run_Find_all_substrings_of_a_string()
 		}
-		fmt.Println("=====================")		
+		fmt.Println("=====================")	
+	case 6:
+		fmt.Println("Hence running Run_Find_all_contiguous_substrings_of_a_string.go")
+		fmt.Println("=====================")
+		if number == 6 {
+			strings.Run_Find_all_contiguous_substrings_of_a_string()
+		}
+		fmt.Println("=====================")	
 	default:
 		fmt.Println("Please enter valid option.")
 	}
