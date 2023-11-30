@@ -12,6 +12,7 @@ func main() {
 	fmt.Println("2. Run KMP_Algorithm_String_Matching_algo.go")
 	fmt.Println("3. Run Length_of_the_last_word.go")
 	fmt.Println("4. Run Longest_Common_Prefix.go")
+	fmt.Println("5. Run Find_all_substrings_of_a_string.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -45,6 +46,13 @@ func main() {
 			strings.Run_Longest_Common_Prefix()
 		}
 		fmt.Println("=====================")
+	case 5:
+		fmt.Println("Hence running Find_all_substrings_of_a_string.go")
+		fmt.Println("=====================")
+		if number == 5 {
+			strings.Run_Find_all_substrings_of_a_string()
+		}
+		fmt.Println("=====================")		
 	default:
 		fmt.Println("Please enter valid option.")
 	}
