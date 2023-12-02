@@ -15,6 +15,7 @@ func main() {
 	fmt.Println("5. Run Find_all_substrings_of_a_string.go")
 	fmt.Println("6. Run Find_all_contiguous_substrings_of_a_string.go")
 	fmt.Println("7. Run Find_Substring_with_Concatenation_of_All_Words.go")
+	fmt.Println("8. Run Find_Minimum_Window_Substring.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -67,6 +68,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 7 {
 			strings.Run_Find_Substring_with_Concatenation_of_All_Words()
+		}
+		fmt.Println("=====================")
+	case 8:
+		fmt.Println("Hence running Run_Find_Minimum_Window_Substring.go")
+		fmt.Println("=====================")
+		if number == 8 {
+			strings.Run_Find_Minimum_Window_Substring()
 		}
 		fmt.Println("=====================")	
 	default:
