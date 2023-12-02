@@ -13,7 +13,8 @@ func main() {
 	fmt.Println("3. Run Length_of_the_last_word.go")
 	fmt.Println("4. Run Longest_Common_Prefix.go")
 	fmt.Println("5. Run Find_all_substrings_of_a_string.go")
-	fmt.Println("6. Run Run_Find_all_contiguous_substrings_of_a_string.go")
+	fmt.Println("6. Run Find_all_contiguous_substrings_of_a_string.go")
+	fmt.Println("7. Run Find_Substring_with_Concatenation_of_All_Words.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -59,6 +60,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 6 {
 			strings.Run_Find_all_contiguous_substrings_of_a_string()
+		}
+		fmt.Println("=====================")	
+	case 7:
+		fmt.Println("Hence running Run_Find_Substring_with_Concatenation_of_All_Words.go")
+		fmt.Println("=====================")
+		if number == 7 {
+			strings.Run_Find_Substring_with_Concatenation_of_All_Words()
 		}
 		fmt.Println("=====================")	
 	default:

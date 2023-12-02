@@ -7,7 +7,7 @@ func findAllContiguousSubstrings(s string) map[string]struct{} {
 	res := make(map[string]struct{}, 0)
 	str := string(s[0])
 	res[str] = struct{}{}
-	for i:=1; i<lenS;i++ {
+	for i:=1;i<lenS;i++ {
 		if s[i-1] == s[i] {
 			str += string(s[i])
 		} else {
