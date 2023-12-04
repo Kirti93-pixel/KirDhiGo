@@ -19,6 +19,7 @@ func main() {
 	fmt.Println("9. Run Excel_Title_to_Number.go")
 	fmt.Println("10. Run Reverse_bits.go")
 	fmt.Println("11. Run Hamming_weight.go")
+	fmt.Println("12. Run Gas_Station.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -92,6 +93,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 11 {
 			others.Run_Hamming_weight()
+		}
+		fmt.Println("=====================")
+	case 12:
+		fmt.Println("Hence running Gas_Station.go")
+		fmt.Println("=====================")
+		if number == 12 {
+			others.Run_Gas_Station()
 		}
 		fmt.Println("=====================")	
 	default:
