@@ -16,6 +16,7 @@ func main() {
 	fmt.Println("6. Run Has_path_sum.go")
 	fmt.Println("7. Run Right_Side_View.go")
 	fmt.Println("8. Run Average_of_Levels.go")
+	fmt.Println("9. Run Find_kth_Largest_Elem.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -75,6 +76,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 8 {
 			trees.Run_Average_of_Levels()
+		}
+		fmt.Println("=====================")
+	case 9:
+		fmt.Println("Hence running Find_kth_Largest_Elem.go")
+		fmt.Println("=====================")
+		if number == 9 {
+			trees.Run_Find_kth_Largest_Elem()
 		}
 		fmt.Println("=====================")
 	default:
