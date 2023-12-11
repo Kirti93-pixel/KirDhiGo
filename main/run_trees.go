@@ -15,6 +15,7 @@ func main() {
 	fmt.Println("5. Run Two_BSTs_Identical_or_not.go")
 	fmt.Println("6. Run Has_path_sum.go")
 	fmt.Println("7. Run Right_Side_View.go")
+	fmt.Println("8. Run Average_of_Levels.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -67,6 +68,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 7 {
 			trees.Run_Right_Side_View()
+		}
+		fmt.Println("=====================")
+	case 8:
+		fmt.Println("Hence running Average_of_Levels.go")
+		fmt.Println("=====================")
+		if number == 8 {
+			trees.Run_Average_of_Levels()
 		}
 		fmt.Println("=====================")
 	default:
