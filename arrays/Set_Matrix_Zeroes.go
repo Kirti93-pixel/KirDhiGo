@@ -101,9 +101,10 @@ func Run_Set_Matrix_Zeroes() {
 		{1, 0, 1},
 		{1, 1, 1},
 	}
-	fmt.Println("1. For matrix", matrix, " output is::")
+	fmt.Println("1. For matrix", matrix)
 	setMatrixZeroes(matrix)
-	fmt.Println(matrix)
+	fmt.Println("output is::", matrix)
+	fmt.Println()
 
 	matrix = [][]int{
 		{0, 1, 2, 0},
@@ -111,7 +112,7 @@ func Run_Set_Matrix_Zeroes() {
 		{1, 3, 1, 5},
 	}
 
-	fmt.Println("2. For matrix", matrix, " output is::")
+	fmt.Println("2. For matrix", matrix)
 	setMatrixZeroes(matrix)
-	fmt.Println(matrix)
+	fmt.Println("output is::", matrix)
 }
