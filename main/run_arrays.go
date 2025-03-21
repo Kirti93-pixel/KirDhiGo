@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/Kirti93-pixel/KirDhiGo/arrays"
 	"fmt"
+
+	"github.com/Kirti93-pixel/KirDhiGo/arrays"
 )
 
 func main() {
@@ -19,7 +20,8 @@ func main() {
 	fmt.Println("9. Search_Insert.go")
 	fmt.Println("10. Single_Number.go")
 	fmt.Println("11. Majority_Element.go")
-	
+	fmt.Println("12. Set_Matrix_Zeroes.go")
+
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
 	fmt.Printf("Input number is %d \n", number)
@@ -99,6 +101,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 11 {
 			arrays.Run_Majority_Element()
+		}
+		fmt.Println("=====================")
+	case 12:
+		fmt.Println("Hence running Set_Matrix_Zeroes.go")
+		fmt.Println("=====================")
+		if number == 12 {
+			arrays.Run_Set_Matrix_Zeroes()
 		}
 		fmt.Println("=====================")
 	default:
