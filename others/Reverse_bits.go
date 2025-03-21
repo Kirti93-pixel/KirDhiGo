@@ -16,7 +16,7 @@ func reverseBits(num uint32) uint32 {
     return res
 }
 
-func Run_Reverse_bits() {
+func Run_Reverse_Bits() {
 	fmt.Println("Reversed num 4294967293 is", reverseBits(uint32(4294967293))) // binary 11111111111111111111111111111101
 	fmt.Println("Reversed num 43261596 is", reverseBits(uint32(43261596))) // binary 00000010100101000001111010011100
 }
