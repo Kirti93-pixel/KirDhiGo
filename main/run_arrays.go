@@ -22,6 +22,7 @@ func main() {
 	fmt.Println("11. Majority_Element.go")
 	fmt.Println("12. Set_Matrix_Zeroes.go")
 	fmt.Println("13. Summary_Ranges.go")
+	fmt.Println("14. Rotate_Image.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -116,6 +117,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 13 {
 			arrays.Run_Summary_Ranges()
+		}
+		fmt.Println("=====================")
+	case 14:
+		fmt.Println("Hence running Rotate_Image.go")
+		fmt.Println("=====================")
+		if number == 14 {
+			arrays.Run_Rotate_Image()
 		}
 		fmt.Println("=====================")
 	default:
