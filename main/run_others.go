@@ -74,6 +74,13 @@ func main() {
 			others.Run_Is_Palindrome()
 		}
 		fmt.Println("=====================")
+	case 8:
+		fmt.Println("Hence running Covert_excel_column_to_Alphabet_Name.go")
+		fmt.Println("=====================")
+		if number == 8 {
+			others.Run_Covert_excel_column_to_Alphabet_Name()
+		}
+		fmt.Println("=====================")
 	case 9:
 		fmt.Println("Hence running Excel_Title_to_Number.go")
 		fmt.Println("=====================")
