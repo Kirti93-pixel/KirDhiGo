@@ -21,6 +21,7 @@ func main() {
 	fmt.Println("10. Single_Number.go")
 	fmt.Println("11. Majority_Element.go")
 	fmt.Println("12. Set_Matrix_Zeroes.go")
+	fmt.Println("13. Summary_Ranges.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -108,6 +109,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 12 {
 			arrays.Run_Set_Matrix_Zeroes()
+		}
+		fmt.Println("=====================")
+	case 13:
+		fmt.Println("Hence running Summary_Ranges.go")
+		fmt.Println("=====================")
+		if number == 13 {
+			arrays.Run_Summary_Ranges()
 		}
 		fmt.Println("=====================")
 	default:
