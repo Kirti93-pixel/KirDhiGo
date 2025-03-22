@@ -1,5 +1,5 @@
 # KirDhiGo
-The repository contains the optimized Solutions (written in Golang) for various Computer Science and Data Structure &amp; Algorithmic Problems.
+The repository contains the optimized Solutions (written in Golang) for various Computer Science and Data Structure &amp; Algorithmic Problems listed below.
 
 The project can run directly in any Go installed system.
 E.g.,
