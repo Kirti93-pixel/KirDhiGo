@@ -23,6 +23,7 @@ func main() {
 	fmt.Println("12. Set_Matrix_Zeroes.go")
 	fmt.Println("13. Summary_Ranges.go")
 	fmt.Println("14. Rotate_Image.go")
+	fmt.Println("15. Longest_Palindrome.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -124,6 +125,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 14 {
 			arrays.Run_Rotate_Image()
+		}
+		fmt.Println("=====================")
+	case 15:
+		fmt.Println("Hence running Longest_Palindrome.go")
+		fmt.Println("=====================")
+		if number == 15 {
+			arrays.Run_Longest_Palindrome()
 		}
 		fmt.Println("=====================")
 	default:
