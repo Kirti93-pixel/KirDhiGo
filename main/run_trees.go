@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/Kirti93-pixel/KirDhiGo/trees"
 	"fmt"
+
+	"github.com/Kirti93-pixel/KirDhiGo/trees"
 )
 
 func main() {
@@ -17,6 +18,7 @@ func main() {
 	fmt.Println("7. Run Right_Side_View.go")
 	fmt.Println("8. Run Average_of_Levels.go")
 	fmt.Println("9. Run Find_kth_Largest_Elem.go")
+	fmt.Println("10. Run NAry_Tree_Sal_Problem.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -83,6 +85,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 9 {
 			trees.Run_Find_kth_Largest_Elem()
+		}
+		fmt.Println("=====================")
+	case 10:
+		fmt.Println("Hence running NAry_Tree_Sal_Problem.go")
+		fmt.Println("=====================")
+		if number == 10 {
+			trees.Run_NAry_Tree_Sal_Problem()
 		}
 		fmt.Println("=====================")
 	default:
