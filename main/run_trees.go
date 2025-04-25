@@ -19,6 +19,7 @@ func main() {
 	fmt.Println("8. Run Average_of_Levels.go")
 	fmt.Println("9. Run Find_kth_Largest_Elem.go")
 	fmt.Println("10. Run NAry_Tree_Sal_Problem.go")
+	fmt.Println("11. Run NAry_Tree_Sal_Problem_Opt.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -92,6 +93,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 10 {
 			trees.Run_NAry_Tree_Sal_Problem()
+		}
+		fmt.Println("=====================")
+	case 11:
+		fmt.Println("Hence running NAry_Tree_Sal_Problem_Opt.go")
+		fmt.Println("=====================")
+		if number == 11 {
+			trees.Run_NAry_Tree_Sal_Problem_Opt()
 		}
 		fmt.Println("=====================")
 	default:
