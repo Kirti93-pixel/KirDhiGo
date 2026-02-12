@@ -21,7 +21,8 @@ func main() {
 	fmt.Println("10. Run Reverse_Bits.go")
 	fmt.Println("11. Run Hamming_Weight.go")
 	fmt.Println("12. Run Gas_Station.go")
-	fmt.Println("13. Run Zigzag_Conversion.go")
+	fmt.Println("13. Run Random_Num_Generator.go")
+	fmt.Println("14. Run Zigzag_Conversion.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -112,9 +113,16 @@ func main() {
 		}
 		fmt.Println("=====================")
 	case 13:
-		fmt.Println("Hence running Zigzag_Conversion.go")
+		fmt.Println("Hence running Random_Num_Generator.go")
 		fmt.Println("=====================")
 		if number == 13 {
+			others.Run_Random_Num_Generator()
+		}
+		fmt.Println("=====================")	
+    case 14:
+		fmt.Println("Hence running Zigzag_Conversion.go")
+		fmt.Println("=====================")
+		if number == 14 {
 			others.Run_Zigzag_Conversion()
 		}
 		fmt.Println("=====================")
