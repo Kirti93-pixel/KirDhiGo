@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/Kirti93-pixel/KirDhiGo/others"
 	"fmt"
+
+	"github.com/Kirti93-pixel/KirDhiGo/others"
 )
 
 func main() {
@@ -17,10 +18,11 @@ func main() {
 	fmt.Println("7. Run Is_Palindrome.go")
 	fmt.Println("8. Run Covert_excel_column_to_Alphabet_Name.go")
 	fmt.Println("9. Run Excel_Title_to_Number.go")
-	fmt.Println("10. Run Reverse_bits.go")
-	fmt.Println("11. Run Hamming_weight.go")
+	fmt.Println("10. Run Reverse_Bits.go")
+	fmt.Println("11. Run Hamming_Weight.go")
 	fmt.Println("12. Run Gas_Station.go")
 	fmt.Println("13. Run Random_Num_Generator.go")
+	fmt.Println("14. Run Zigzag_Conversion.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -75,6 +77,13 @@ func main() {
 			others.Run_Is_Palindrome()
 		}
 		fmt.Println("=====================")
+	case 8:
+		fmt.Println("Hence running Covert_excel_column_to_Alphabet_Name.go")
+		fmt.Println("=====================")
+		if number == 8 {
+			others.Run_Covert_excel_column_to_Alphabet_Name()
+		}
+		fmt.Println("=====================")
 	case 9:
 		fmt.Println("Hence running Excel_Title_to_Number.go")
 		fmt.Println("=====================")
@@ -83,17 +92,17 @@ func main() {
 		}
 		fmt.Println("=====================")
 	case 10:
-		fmt.Println("Hence running Reverse_bits.go")
+		fmt.Println("Hence running Reverse_Bits.go")
 		fmt.Println("=====================")
 		if number == 10 {
-			others.Run_Reverse_bits()
+			others.Run_Reverse_Bits()
 		}
 		fmt.Println("=====================")
 	case 11:
-		fmt.Println("Hence running Hamming_weight.go")
+		fmt.Println("Hence running Hamming_Weight.go")
 		fmt.Println("=====================")
 		if number == 11 {
-			others.Run_Hamming_weight()
+			others.Run_Hamming_Weight()
 		}
 		fmt.Println("=====================")
 	case 12:
@@ -110,6 +119,13 @@ func main() {
 			others.Run_Random_Num_Generator()
 		}
 		fmt.Println("=====================")	
+    case 14:
+		fmt.Println("Hence running Zigzag_Conversion.go")
+		fmt.Println("=====================")
+		if number == 14 {
+			others.Run_Zigzag_Conversion()
+		}
+		fmt.Println("=====================")
 	default:
 		fmt.Println("Please enter valid option.")
 	}
