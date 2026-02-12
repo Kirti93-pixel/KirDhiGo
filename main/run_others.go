@@ -20,6 +20,7 @@ func main() {
 	fmt.Println("10. Run Reverse_bits.go")
 	fmt.Println("11. Run Hamming_weight.go")
 	fmt.Println("12. Run Gas_Station.go")
+	fmt.Println("13. Run Random_Num_Generator.go")
 
 	fmt.Print("Option: ")
 	fmt.Scanln(&number)
@@ -100,6 +101,13 @@ func main() {
 		fmt.Println("=====================")
 		if number == 12 {
 			others.Run_Gas_Station()
+		}
+		fmt.Println("=====================")
+	case 13:
+		fmt.Println("Hence running Random_Num_Generator.go")
+		fmt.Println("=====================")
+		if number == 13 {
+			others.Run_Random_Num_Generator()
 		}
 		fmt.Println("=====================")	
 	default:
